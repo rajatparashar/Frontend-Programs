@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+<title>W3.CSS Template</title>
+<style>
+
+	body
+	{
+		font-family: Sawasdee;		
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	.content
+	{
+		height: 400px;
+		width: 500px;
+		border:1px dotted black;
+		overflow: scroll;
+		overflow-x: hidden;
+		padding: 20px 50px;
+		margin:20px;
+	}
+	
+	p
+	{
+		text-align: justify;
+	}
+	
+	::-webkit-scrollbar 
+	{
+		width:12px;
+	}
+
+	
+	::-webkit-scrollbar-thumb:vertical
+	{
+		background:#C60 url(x-scroll.png) center no-repeat;
+		border: 1px solid #333;
+		box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+		border-radius:5px;
+	}
+	
+	::-webkit-scrollbar-thumb:vertical:hover
+	{
+		background-color:#C96;
+	}	
+
+</style>
+</head>
+	
+<body oncontextmenu="return false">      <!--oncontextmenu="return false statement disable 'select' -->
+
+<div class="content">
+<p>Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language. While most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.[1] CSS is designed primarily to enable the separation of document content from document presentation, including elements such as the layout, colors, and fonts.[2] This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple HTML pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content, such as semantically insignificant tables that were widely used to format pages before consistent CSS rendering was available in all major browsers. CSS makes it possible to separate presentation instructions from the HTML content in a separate file or style section of the HTML file. For each matching HTML element, it provides a list of formatting instructions. For example, a CSS rule might specify that "all heading 1 elements should be bold," leaving pure semantic HTML markup that asserts "this text is a level 1 heading" without formatting code such as a tag indicating how such text should be displayed. This separation of formatting and content makes it possible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (when read out by a speech-based browser or screen reader) and on Braille-based, tactile devices. It can also be used to display the web page differently depending on the screen size or device on which it is being viewed. While the author of a web page typically links to a CSS file within the markup file, readers can specify a different style sheet, such as a CSS file stored on their own computer, to override the one the author has specified. If the author or the reader did not link the document to a style sheet, the default style of the browser will be applied. The CSS specification describes a priority scheme to determine which style rules apply if more than one rule matches against a particular element. In this so-called cascade, priorities or weights are calculated and assigned to rules, so that the results are predictable. The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.[3]</p>	
+</div>	
+</body>
+</html>
