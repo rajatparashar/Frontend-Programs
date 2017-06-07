@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Login Form</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 5%;
+        }
+        
+        * {
+            box-sizing: border-box;
+            outline: none;
+        }
+        
+        #loginbtn {
+            color: white;
+            background-color: #40bf40;
+            width: auto;
+            padding: 8px 16px;
+            border: none;
+            font-size: 16px;
+            font-weight: 100;
+            cursor: pointer;
+        }
+        
+        .container {
+            font-family: sans-serif;
+            padding: 15px;
+            padding-bottom: 0;
+            margin: 10%;
+            margin-top: 3%;
+            width: 75%;
+            box-shadow: 3px 2px 10px 5px #646464;
+            display: none;
+            background-color: white;
+        }
+        
+        img {
+            width: 30%;
+            border-radius: 50%;
+        }
+        
+        #imgcontainer {
+            text-align: center;
+        }
+        
+        #cross {
+            float: right;
+            font-size: 32px;
+            color: black;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        #cross:hover {
+            color: red;
+        }
+        
+        label {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        
+        #username,
+        #password {
+            width: 100%;
+            border: 1px solid #b4b4b4;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 10px 0px;
+            font-size: 15px;
+        }
+        
+        #submitbtn {
+            color: white;
+            background-color: #40bf40;
+            width: 100%;
+            padding: 10px 16px;
+            border: none;
+            font-size: 16px;
+            font-weight: 100;
+            cursor: pointer;
+        }
+        
+        #submitbtn:hover {
+            background-color: #339933;
+        }
+        
+        #footer {
+            background-color: #e6e6e6;
+            margin-top: 10px;
+        }
+        
+        #cancelbtn {
+            color: white;
+            background-color: red;
+            width: auto;
+            padding: 8px 16px;
+            border: none;
+            font-size: 16px;
+            font-weight: 100;
+            cursor: pointer;
+            margin: 20px 0 20px 15px;
+        }
+        
+        p {
+            display: inline-block;
+            float: right;
+            margin-top: 25px;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+        
+        #check {
+            margin-top: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Click here to login</h3>
+    <button id="loginbtn">Login</button>
+
+    <div class="container">
+
+        <form method="post">
+            <span id="cross">&times;</span>
+            <div id="imgcontainer"><img src="https://www.w3schools.com/css/img_avatar.png" alt="No image found!"></div>
+
+            <label>Username</label>
+            <input id="username" type="text" name="username" placeholder="Enter Username" required>
+
+            <label>Password</label>
+            <input id="password" type="password" name="password" placeholder="Enter Password" required>
+
+            <input type="submit" id="submitbtn" value="Login">
+
+            <input id="check" type="checkbox" checked="checked">Remember me
+
+            <footer id="footer">
+                <button id="cancelbtn">Cancel</button>
+                <p><a href="#">Forgot password?</a></p>
+            </footer>
+
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#loginbtn").click(function() {
+                $("body").css('background-color', '#a0a0a0');
+                $(".container").fadeIn();
+            });
+
+            $("#cancelbtn").click(function() {
+                $(".container").hide();
+                $("body").css('background-color', 'white');
+            });
+
+            $("#cross").click(function() {
+                $(".container").hide();
+                $("body").css('background-color', 'white');
+            });
+
+            $("");
+
+        });
+    </script>
+</body>
+
+</html>

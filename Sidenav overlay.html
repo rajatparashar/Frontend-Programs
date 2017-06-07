@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Horizontal icon bar</title>
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        
+        p {
+            color: black;
+            font-weight: 600;
+            margin: 0px;
+        }
+        
+        .container {
+            margin: 25px 0 0 205px;
+            display: inline-block;
+        }
+        
+        .menu {
+            height: 100%;
+            width: 0px;
+            background-color: black;
+            margin: 0px;
+            position: fixed;
+            top: 0;
+            padding-left: 0px;
+            padding-top: 30px;
+        }
+        
+        a {
+            color: #5a5a5a;
+            display: block;
+            padding-top: 20px;
+            font-size: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        #cross {
+            color: #5a5a5a;
+            font-size: 27px;
+            float: right;
+            padding-right: 10px;
+            margin-top: -30px;
+            transition: 0.3s;
+        }
+        
+        a:hover,
+        #cross:hover {
+            color: white;
+        }
+        
+        .content {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  this is for button -->
+    <div class="container" style="font-size:25px; font-weight:500;cursor:pointer;color:black; ">
+        <span> &#9776; Open</span>
+        <!--  this is for menu window -->
+    </div>
+
+    <div class="menu">
+        <div class="menubar">
+            <a href="#"><span id="cross">&times;</span></a>
+            <div class="content">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".menubar").hide();
+
+            $(".container").click(function() {
+                $(".menu").animate({
+                    width: '180px'
+                });
+                $(".menubar").css('display', 'block');
+            });
+
+            $("#cross").click(function() {
+                $(".menu").animate({
+                    width: '0px'
+                });
+                $(".menubar").fadeOut();
+            });
+        });
+    </script>
+</body>
+
+</html>

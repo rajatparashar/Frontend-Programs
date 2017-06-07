@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Alert</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <style>
+        .alert {
+            width: 60%;
+            background-color: red;
+            padding: 5px 0 5px 15px;
+            color: white;
+        }
+        
+        .close {
+            color: white;
+            text-align: right;
+            float: right;
+            padding: 15px 20px 5px 0px;
+            font-size: 18px;
+        }
+        
+        .close:hover {
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert">
+        <span class="close">&times;</span>
+        <p><strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.close').click(function() {
+                $('div').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

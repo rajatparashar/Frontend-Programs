@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Accordion</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        .accordion {
+            color: #505050;
+            background-color: #c8c8c8;
+            width: 70%;
+            margin: 0;
+            cursor: pointer;
+        }
+        
+        .accordion:hover {
+            background-color: #b3b3b3;
+            transition: 0.4s;
+        }
+        
+        p {
+            display: none;
+            background-color: #eee;
+        }
+        
+        .open {
+            display: block;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        <h3>Section 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+
+    <div class="accordion">
+        <h3>Section 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <div class="accordion">
+        <h3>Section 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.accordion').click(function() {
+                $(this).children().toggleClass('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
