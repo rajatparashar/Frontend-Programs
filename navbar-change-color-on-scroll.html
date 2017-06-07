@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Navbar changing color on scroll</title>
+    <style>
+        body {
+            font-family: "Raleway";
+            line-height: 1.8;
+            height: 2000px;
+        }
+        
+        * {
+            transition: 0.3s ease;
+        }
+        
+        .navbar {
+            letter-spacing: 1.5px;
+        }
+        
+        .navbar-default {
+            background-color: black;
+        }
+        
+        #logo:hover {
+            color: white;
+        }
+        
+        .navbar-fixed-top.scrolled {
+            background-color: #fff !important;
+            transition: background-color 300ms linear;
+        }
+        
+        .navbar-fixed-top.scrolled li a,
+        .navbar-fixed-top.scrolled a {
+            color: #000;
+            font-size: 14px;
+        }
+        
+        .navbar-fixed-top.scrolled a {
+            font-size: 15px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand" id="logo">START BOOTSTRAP</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $(".navbar-fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>
