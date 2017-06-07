@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        P {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        
+        @media screen and (max-width:480px) {
+            span::after {
+                content: 'Mobile Phones';
+            }
+            #container {
+                background: lightblue;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        @media screen and (min-width:481px) {
+            span::after {
+                content: 'Tablets';
+            }
+            #container {
+                background: lightyellow;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        @media screen and (min-width:768px) {
+            span::after {
+                content: 'Small Laptops';
+            }
+            #container {
+                background: lightgreen;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        @media screen and (min-width:1100px) {
+            span::after {
+                content: 'Large Desktops';
+            }
+            #container {
+                background: lightpink;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+
+    <TITLE>media query1</TITLE>
+</HEAD>
+
+<BODY>
+
+    <div id="container">
+        <p>Screen width category is:<span id="wide"> </span></p>
+    </div>
+
+</BODY>
+
+</HTML>
